@@ -10,10 +10,7 @@
                 options: {
                     chart: {
                         type: 'bar',
-                        id: 'vuechart-example',
-                        selection: {
-                            enabled: false
-                        },
+                        id: 'chart',
                         zoom: {
                             enabled: true,
                         },
@@ -55,15 +52,13 @@
         components: {
             VueApexCharts
         },
-        created() {
-        },
-        mounted() {
-        },
         methods: {
             currencyFilter,
         },
         beforeUpdate() {
+            // to update data when choose another company
             this.series = [{name: 'sales in €', data: this.barChart.sales_yearly.map(item => item.sales)}];
+            this.options.xaxis.categories = this.barChart.sales_yearly.map(item => new Date(item.year));
         },
     }) 
 </script>
@@ -73,10 +68,17 @@
         <h2 class="title mb-4">Auftragseingang / Umsatz</h2>
         <span class="small small-title">Gesamt</span>
         <h2>{{currencyFilter(barChart.sales)}}</h2>
-        <VueApexCharts ref="chart" heigth="200" width="300" type="bar" :options="options" :series="series"/>
+        <VueApexCharts ref="chart" heigth="200" width="100%" type="bar" :options="options" :series="series"/>
     </div>
 </template>
 
 <style scoped>
-
+    @media (max-width: 991px) {
+        #bar-chart {
+            width: 100%;
+        }
+        .title {
+            margin-top: 2rem;
+        }
+    }
 </style>

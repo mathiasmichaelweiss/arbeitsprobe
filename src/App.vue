@@ -46,5 +46,5 @@
 </template>
 
 <style>
-  @import "./assets/base.css";
+  @import "./assets/base.css";    
 </style>

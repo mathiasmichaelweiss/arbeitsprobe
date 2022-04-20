@@ -33,10 +33,6 @@
                 this.cardStyle.border = '1px solid #EE7815';
             }
         },
-        mounted() {
-        },
-        methods: {
-        }
     }) 
 </script>
 
@@ -55,10 +51,9 @@
     .score-card {
         width: 48%;
         padding: 15px;
-        /* box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.05); */
         height: 250px;
         border-radius: 5px;
-        width: 200px;
+        width: 100%;
         height: 115px;
     }
     svg {

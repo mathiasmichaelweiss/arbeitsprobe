@@ -5,23 +5,23 @@
     } from 'bootstrap-icons-vue';
 
     export default ({
-        props: ['title', 'name', 'color', 'departament', 'position', 'country', 'phone', 'email', 'listFilter'],
+        props: [
+                'title', 
+                'name', 
+                'color', 
+                'departament', 
+                'position', 
+                'country', 
+                'phone', 
+                'email', 
+                'listFilter', 
+                'companyName'
+        ],
         name: 'ContactCard',
-        data() {
-            return {
-            };
-        },
         components: {
             BIconTelephoneFill,
             BIconEnvelopeFill
         },
-        created() {
-            // console.log(this.color);
-        },
-        mounted() {
-        },
-        methods: {
-        }
     }) 
 </script>
 
@@ -37,7 +37,7 @@
                 <div v-if="departament || position || country" class="info">
                     <p :title="departament" class="text-left m-1">{{ departament }}</p>
                     <p :title="position" class="text-left m-1">{{ position }}</p>
-                    <p :title="'Workforce Machinerz GmbH ' + country" class="text-left m-1">Workforce Machinerz GmbH {{ country.slice(0, 5) + '...' }}</p>
+                    <p :title="companyName + ' ' + country" class="text-left m-1">{{ companyName }} {{ (companyName + country).length >= 34 ? country.slice(0, 5) + '...' : country }}</p>
                 </div>
                 <img v-if="!color" src="../../assets/icons/person-fill.svg" alt="">
                 <img v-else src="../../assets/icons/person-fill-blue.svg" alt="">
@@ -56,15 +56,11 @@
 </template>
 
 <style scoped>
-    .crefItem {
-        width: 48%;
-        padding: 15px;
-        background-color: #ffffff;
-        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.05);
-        height: 250px;
-    }
     .card-item-title {
         margin-bottom: 30px;
+    }
+    .card-item-title:nth-child(1) {
+        margin-top: 1rem;
     }
     .card, .blueCard {
         filter: drop-shadow(0px 1px 4px rgba(0, 0, 0, 0.07));
@@ -76,11 +72,10 @@
     }
     .card {
         width: 240px;
-        height: 140px;
+        min-height: 140px;
     }
     .blueCard {
-        width: 90%;
-        height: 150px;
+        width: 95%;
         margin-bottom: 2rem;
     }
     .contacts svg {
@@ -94,9 +89,6 @@
     }
     .blueCard .contacts svg:hover {
         color: #2d5589;
-    }
-    hr {
-        width: 85%;
     }
     .blueCard .contacts svg {
         color: #386CAE;
@@ -128,5 +120,8 @@
     }
     .info, .info p {
         width: 100%;
+    }
+    hr {
+        width: 85%;
     }
 </style>

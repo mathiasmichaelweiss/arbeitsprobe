@@ -1,5 +1,5 @@
 <script>
-    import ContactCardVue from "../ui/ContactCard.vue";
+    import ContactCardVue from '../ui/ContactCard.vue';
     import { 
         BIconListUl,
         BIconColumnsGap,
@@ -14,7 +14,7 @@
             return {
                 columnFilter: true,
                 listFilter: false,
-                list: [],
+                filteredList: [],
                 searchRequest: '',
                 searchParam: 'name'
             };
@@ -26,42 +26,34 @@
             BIconTelephoneFill,
             BIconEnvelopeFill
         },
-        created() {
-        },
-        mounted() {
-
+        watch: {
+            company() {
+                this.filteredList = [];
+            }
         },
         methods: {
-            setSearchParam() {
-                console.log(this.searchParam)
-            },
             handleSearch() {
                 if (this.searchParam === 'name') {
                     let regExp = new RegExp(this.searchRequest.toLowerCase(), 'g')
-                    this.list = this.company.contact_person.filter(c => c.name.toLowerCase().match(regExp));
-                    console.log(this.list);
+                    this.filteredList = this.company.contact_person.filter(c => c.name.toLowerCase().match(regExp));
                 }
 
                 if (this.searchParam === 'position') {
                     let regExp = new RegExp(this.searchRequest.toLowerCase(), 'g')
-                    this.list = this.company.contact_person.filter(c => c.position.toLowerCase().match(regExp));
-                    console.log(this.list);
+                    this.filteredList = this.company.contact_person.filter(c => c.position.toLowerCase().match(regExp));
                 }
 
                 if (this.searchParam === 'country') {
                     let regExp = new RegExp(this.searchRequest.toLowerCase(), 'g')
-                    this.list = this.company.contact_person.filter(c => c.office.toLowerCase().match(regExp));
-                    console.log(this.list);
+                    this.filteredList = this.company.contact_person.filter(c => c.office.toLowerCase().match(regExp));
                 }
 
                 if (this.searchParam === 'department') {
                     let regExp = new RegExp(this.searchRequest.toLowerCase(), 'g')
-                    this.list = this.company.contact_person.filter(c => c.department.toLowerCase().match(regExp));
-                    console.log(this.list);
+                    this.filteredList = this.company.contact_person.filter(c => c.department.toLowerCase().match(regExp));
                 }
             },
             setFilter() {
-                this.columnFilter = !this.columnFilter;
                 this.listFilter = !this.listFilter;
             }
         }
@@ -78,7 +70,7 @@
                         <div class="filterButton mr-1" v-bind:class="{active: listFilter}" v-on:click="setFilter()">
                             <BIconListUl />
                         </div>
-                        <div class="filterButton mr-1" v-bind:class="{active: columnFilter}" v-on:click="setFilter()">
+                        <div class="filterButton mr-1" v-bind:class="{active: !listFilter}" v-on:click="setFilter()">
                             <BIconColumnsGap />
                         </div>
                         <input type="text" class="table-search mr-1" v-model="searchRequest" v-on:input="handleSearch">
@@ -107,7 +99,7 @@
                         <td>
                             <ContactCardVue 
                                 v-for="
-                                    (item, index) in list.length <= 0 ? company.contact_person.filter(item => item.department === 'management') : list.filter(item => item.department === 'management')
+                                    (item, index) in filteredList.length <= 0 ? company.contact_person.filter(item => item.department === 'management') : filteredList.filter(item => item.department === 'management')
                                 " 
                                 :key="index" 
                                 v-bind:color="'#386CAE'"
@@ -118,12 +110,13 @@
                                 v-bind:phone="item.phone"
                                 v-bind:email="item.email"
                                 v-bind:listFilter="listFilter"
+                                v-bind:companyName="company.name"
                             />
                         </td>
                         <td>
                             <ContactCardVue 
                                     v-for="
-                                        (item, index) in list.length <= 0 ? company.contact_person.filter(item => item.department === 'employees') : list.filter(item => item.department === 'employees')
+                                        (item, index) in filteredList.length <= 0 ? company.contact_person.filter(item => item.department === 'employees') : filteredList.filter(item => item.department === 'employees')
                                     " 
                                     :key="index" 
                                     v-bind:color="'#386CAE'"
@@ -134,12 +127,13 @@
                                     v-bind:phone="item.phone"
                                     v-bind:email="item.email"
                                     v-bind:listFilter="listFilter"
+                                    v-bind:companyName="company.name"
                             />
                         </td>
                         <td>
                             <ContactCardVue 
                                 v-for="
-                                    (item, index) in list.length <= 0 ? company.contact_person.filter(item => item.department === 'Head of Purchasing') : list.filter(item => item.department === 'Head of Purchasing')
+                                    (item, index) in filteredList.length <= 0 ? company.contact_person.filter(item => item.department === 'Head of Purchasing') : filteredList.filter(item => item.department === 'Head of Purchasing')
                                 " 
                                 :key="index" 
                                 v-bind:color="'#386CAE'"
@@ -150,12 +144,13 @@
                                 v-bind:phone="item.phone"
                                 v-bind:email="item.email"
                                 v-bind:listFilter="listFilter"
+                                v-bind:companyName="company.name"
                             />
                             
                         </td>
                     </tr> 
                 </table>
-                <!-- <hr v-if="listFilter" class="mb-0"/> -->
+
                 <table v-if="listFilter" class="listFilter mt-3">
                     <tr class="tr-header">
                         <th>
@@ -175,7 +170,7 @@
                         </th>
                     </tr> 
                     <tr v-for="
-                        (item, index) of list.length <= 0 ? company.contact_person : list" 
+                        (item, index) of filteredList.length <= 0 ? company.contact_person : filteredList" 
                         :key="index"
                     >
                         <td class="d-flex align-items-center">
@@ -269,11 +264,6 @@
         border: 1px solid #386CAE;
         background-color: #386CAE;
     }
-    /* .filterButton.active:hover {
-        color: #C4C4C4;
-        border: 1px solid #C4C4C4;
-        background-color: #ffffff;
-    } */
     input.table-search, select {
         padding: 0.3rem;
         border: 1px solid #C4C4C4;

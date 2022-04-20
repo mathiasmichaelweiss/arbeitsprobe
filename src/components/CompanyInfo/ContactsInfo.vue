@@ -14,10 +14,6 @@
             BIconPhone,
             BIconEnvelopeFill,
             BIconGlobe,
-        },
-        mounted() {
-        },
-        methods: {
         }
     }) 
 </script>
@@ -54,13 +50,11 @@
     .contacts-item {
         display: flex;
         align-items: center;
+        color: #1452A0;
     }
     .contacts-item svg {
         width: 18px;
         height: 18px;
-    }
-    .contacts-item {
-        color: #1452A0;
     }
 </style>
 

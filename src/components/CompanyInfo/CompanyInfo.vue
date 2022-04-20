@@ -30,8 +30,6 @@
             ContactsInfo,
             CompanySubinfo,
         },
-        mounted() {
-        },
         methods: {
             objectFilter
         },
@@ -58,16 +56,12 @@
     }
     .company-info-inner {
         display: flex;
+        flex-wrap: wrap;
         flex-direction: row;
         justify-content: space-between;
-    }
-    .company-info-inner {
         padding: 15px;
         background-color: #ffffff;
         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.05);
     }
-    /* .sales {
-        width: 290px;
-    } */
 </style>
 

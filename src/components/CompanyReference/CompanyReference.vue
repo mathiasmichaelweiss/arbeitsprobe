@@ -11,22 +11,16 @@
         },
         components: {
             ContactCardVue
-        },
-        created() {
-        },
-        mounted() {
-        },
-        methods: {
         }
     }) 
 </script>
 
 <template>
     <div id="CompanyReference" class="mb-5">
-        <div class="container d-flex justify-content-between" v-if="company">
+        <div class="container d-flex flex-wrap justify-content-between" v-if="company">
             <div class="crefItem d-flex flex-wrap justify-content-between" v-if="company.responsibility">
                 <h2 class="w-100">Zuständligkeit</h2>
-                <hr/>
+                <hr class="w-100"/>
                 <ContactCardVue 
                     v-for="(item, index) in company.responsibility" 
                     :key="index" 
@@ -44,9 +38,7 @@
                 </ul>
                 <p class="mb-3">
                     Anzahl MA: {{ company.remark.MA }} mit einem Umsatz von {{ company.remark.turnover }} Mrd EUR
-                    Benjamin
                 </p>
-                <p>Portfolio des Kunden:</p>
             </div>
         </div>
     </div>
@@ -58,7 +50,7 @@
         padding: 15px;
         background-color: #ffffff;
         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.05);
-        height: 250px;
+        min-height: 250px;
     }
     .card-item-title {
         margin-bottom: 30px;
@@ -96,5 +88,13 @@
     .name {
         font-size: 16px;
         margin-bottom: 7px;
+    }
+    @media (max-width: 991px) {
+        .crefItem {
+            width: 100%;
+        }
+        .crefItem:first-child {
+            margin-bottom: 3rem;
+        }
     }
 </style>

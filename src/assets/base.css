@@ -2,6 +2,12 @@
   padding: 0;
   margin: 0;
   border: 0;
+  -ms-overflow-style: none; 
+  overflow: -moz-scrollbars-none; 
+}
+
+*::-webkit-scrollbar {
+  width: 2px; 
 }
 
 *,*:before,*after{
@@ -28,6 +34,8 @@ html,body{
   color: #3D3D3D;
   font-weight: 400;
   background-color: #F8F8F8;
+  scrollbar-width: none;
+
 }
 
 a {
@@ -62,7 +70,7 @@ h2 {
 }
 
 .container {
-  width: 80%;
+  width: 100%;
   margin: 0 auto;
   height: 100%;
 }

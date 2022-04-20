@@ -2,12 +2,6 @@
     export default ({
         props: ['subinfo'],
         name: 'CompanySubinfo',
-        components: {
-        },
-        mounted() {
-        },
-        methods: {
-        }
     }) 
 </script>
 

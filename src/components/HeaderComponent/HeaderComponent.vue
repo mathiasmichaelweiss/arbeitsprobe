@@ -13,8 +13,6 @@
             BIconHouse,
             BIconBriefcase,
         },
-        mounted() {
-        },
         methods: {
             setCompany() {
                 this.$emit('setCompany', this.searchRequest)
@@ -120,11 +118,24 @@
     }
     .search select {
         appearance: none;
-        background: url('../../assets/icons/search.svg') no-repeat right;
+        background: url(../../assets/icons/search.svg) no-repeat right;
         width: fit-content;
         padding: 0.3rem;
         padding-right: 1.5rem;
         color: #C4C4C4;
+    }
+    @media (max-width: 1200px) {
+        .search-user {
+            width: 45%;
+        }  
+        .logo-menu {
+            min-width: 300px;
+        }
+    }
+    @media (max-width: 991px) {
+        .search-user {
+            width: 57%;
+        }   
     }
 </style>
 

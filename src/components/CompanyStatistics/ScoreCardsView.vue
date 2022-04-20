@@ -15,19 +15,13 @@
         },
         components: {
             ScoreCard
-        },
-        created() {
-        },
-        mounted() {
-        },
-        methods: {
         }
     }) 
 </script>
 
 <template>
     <div id="ScoreCardsView" class="mb-5" v-if="company">
-        <div class="container d-flex justify-content-between">
+        <div class="container">
             <ScoreCard 
                 v-for="(item, index) of company.scorecards"
                 :key="index"
@@ -39,4 +33,11 @@
 </template>
 
 <style scoped>
+    .container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        justify-content: center;
+        row-gap: 20px;
+        column-gap: 20px;
+    }
 </style>

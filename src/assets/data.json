@@ -26,10 +26,10 @@
             "language": "Deutsch (DE)",
             "sales": 110000,
             "sales_yearly": [
-                { "year": 2017, "sales": 27000 },
-                { "year": 2018, "sales": 25700 },
-                { "year": 2019, "sales": 27300 },
-                { "year": 2020, "sales": 30000 }
+                { "year": "01/01/2017", "sales": 27000 },
+                { "year": "01/01/2018", "sales": 25700 },
+                { "year": "01/01/2019", "sales": 27300 },
+                { "year": "01/01/2020", "sales": 30000 }
             ],
             "responsibility": [
                 {
@@ -158,20 +158,20 @@
                 "country": "Deutschland"
             },
             "contacts": {
-                "mobile": "(+49)(06994) 333 3433-43",
-                "landline": "(+49)(06994) 333 3433-0",
-                "email": "info@workforce-machinery.com",
-                "website": "http://www.workforce-machinery.com"
+                "mobile": "(+49)7231 96825 0",
+                "landline": "(+49)7777 77777 0",
+                "email": "info@itmx.de",
+                "website": "https://itmx.de/"
             },
             "field": "Innovation",
             "search_term": "Innovatives CRM System",
             "language": "Deutsch (DE)",
             "sales": 1000000,
             "sales_yearly": [
-                { "year": 2017, "sales": 100000 },
-                { "year": 2018, "sales": 200000 },
-                { "year": 2019, "sales": 300000 },
-                { "year": 2020, "sales": 400000 }
+                { "year": "01/01/2017", "sales": 100000 },
+                { "year": "01/01/2018", "sales": 200000 },
+                { "year": "01/01/2019", "sales": 300000 },
+                { "year": "01/01/2020", "sales": 400000 }
             ],
             "responsibility": [
                 {
@@ -193,11 +193,10 @@
             ],
             "remark": {
                 "portfolio":[ 
-                    "Maschinen für die Pharmaindustrie",
-                    "Verpackungsmaschinen"
+                    "CRM suite für Marketing, Vertrieb und Service"
                 ],
                 "MA": 3500,
-                "turnover": 1.5
+                "turnover": 3
             },
             "scorecards": [
                 {
@@ -231,7 +230,7 @@
                     "id": 0,
                     "department": "management",
                     "position": "Geschäftsführung",
-                    "office": "Niederlande",
+                    "office": "Deutschland",
                     "name": "Stefan Eller",
                     "phone": "(+49)(06994) 333 3433-4",
                     "email": "aechtler@workforce-machinery.com",
@@ -241,7 +240,7 @@
                     "id": 1,
                     "department": "management",
                     "position": "Geschäftsführung",
-                    "office": "Niederlande",
+                    "office": "Deutschland",
                     "name": "Mark Aechter",
                     "phone": "(+49)(06994) 333 3433-0",
                     "email": "aechtler@workforce-machinery.com",
@@ -251,7 +250,7 @@
                     "id": 2,
                     "department": "management",
                     "position": "Geschäftsführung",
-                    "office": "Niederlande",
+                    "office": "Deutschland",
                     "name": "Udo Kurtz",
                     "phone": "(+49)(06994) 333 3433-1",
                     "email": "kurtz@workforce-machinery.com",
@@ -261,7 +260,7 @@
                     "id": 3,
                     "department": "employees",
                     "position": "Einkauf",
-                    "office": "Niederlande",
+                    "office": "Deutschland",
                     "name": "Danny Schlachter",
                     "phone": "(+49)(06994) 333 3433-2",
                     "email": "schlachter@workforce-machinery.com",
@@ -275,7 +274,7 @@
                     "name": "Alaeddine Achouri",
                     "phone": "(+49)(06994) 333 3433-3",
                     "email": "christ@workforce-machinery.com",
-                    "avatar": "https://i.ibb.co/LCxcJvG/christina.jpg"
+                    "avatar": "https://i.ibb.co/khyVbdz/Alaeddine.jpg"
                 },
                 {
                     "id": 4,
