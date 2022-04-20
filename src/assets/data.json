@@ -1,0 +1,293 @@
+{
+    "user": {
+        "id": 1,
+        "name": "Danny Schalchter",
+        "status": "Avalible",
+        "avatar": "https://i.ibb.co/6NRfz7W/user.jpg"
+    },
+    "companies": [
+        {
+            "name": "Workforce Machinery GmbH",
+            "client_id": 1015001,
+            "address": {
+                "street": "Gwinnerstrasse 9",
+                "zip_code": 60388,
+                "city": "Frankfurt",
+                "country": "Deutschland"
+            },
+            "contacts": {
+                "mobile": "(+49)(06994) 333 3433-43",
+                "landline": "(+49)(06994) 333 3433-0",
+                "email": "info@workforce-machinery.com",
+                "website": "http://www.workforce-machinery.com"
+            },
+            "field": "Maschinenbau",
+            "search_term": "workforce machinery",
+            "language": "Deutsch (DE)",
+            "sales": 110000,
+            "sales_yearly": [
+                { "year": 2017, "sales": 27000 },
+                { "year": 2018, "sales": 25700 },
+                { "year": 2019, "sales": 27300 },
+                { "year": 2020, "sales": 30000 }
+            ],
+            "responsibility": [
+                {
+                    "id": 1,
+                    "department": "management",
+                    "name": "Mark Aechter",
+                    "phone": "(+49)(06994) 333 3433-0",
+                    "email": "aechtler@workforce-machinery.com",
+                    "title": "zuständiger Mitarb."
+                },
+                {
+                    "id": 2,
+                    "department": "management",
+                    "name": "Udo Kurtz",
+                    "phone": "(+49)(06994) 333 3433-1",
+                    "email": "kurtz@workforce-machinery.com",
+                    "title": "Key Account Manager"
+                }
+            ],
+            "remark": {
+                "portfolio":[ 
+                    "Maschinen für die Pharmaindustrie",
+                    "Verpackungsmaschinen"
+                ],
+                "MA": 3500,
+                "turnover": 1.5
+            },
+            "scorecards": [
+                {
+                    "score": 6, 
+                    "text": "Ansprechpartner",
+                    "type": "contactPerson"
+                },
+                {
+                    "score": 100, 
+                    "text": "Aktivitäten",
+                    "type": "activities"
+                },
+                {
+                    "score": 20, 
+                    "text": "Opportunities",
+                    "type": "opportunities"
+                },
+                {
+                    "score": 0, 
+                    "text": "Angebote",
+                    "type": "offers"
+                },
+                {
+                    "score": 0, 
+                    "text": "Aufträge",
+                    "type": "contracts"
+                }
+            ],
+            "contact_person": [
+                {
+                    "id": 0,
+                    "department": "management",
+                    "position": "Geschäftsführung",
+                    "office": "Niederlande",
+                    "name": "Stefan Eller",
+                    "phone": "(+49)(06994) 333 3433-4",
+                    "email": "aechtler@workforce-machinery.com",
+                    "avatar": "https://i.ibb.co/mRdZFP1/stefan.jpg"
+                },
+                {
+                    "id": 1,
+                    "department": "management",
+                    "position": "Geschäftsführung",
+                    "office": "Niederlande",
+                    "name": "Mark Aechter",
+                    "phone": "(+49)(06994) 333 3433-0",
+                    "email": "aechtler@workforce-machinery.com",
+                    "avatar": "https://i.ibb.co/XbqpTDY/mark.jpg"
+                },
+                {
+                    "id": 2,
+                    "department": "management",
+                    "position": "Geschäftsführung",
+                    "office": "Niederlande",
+                    "name": "Udo Kurtz",
+                    "phone": "(+49)(06994) 333 3433-1",
+                    "email": "kurtz@workforce-machinery.com",
+                    "avatar": "https://i.ibb.co/0tr8HLS/udo.jpg"
+                },
+                {
+                    "id": 3,
+                    "department": "employees",
+                    "position": "Einkauf",
+                    "office": "Niederlande",
+                    "name": "Danny Schlachter",
+                    "phone": "(+49)(06994) 333 3433-2",
+                    "email": "schlachter@workforce-machinery.com",
+                    "avatar": "https://i.ibb.co/r3Wp5yL/danny.jpg"
+                },
+                {
+                    "id": 4,
+                    "department": "Head of Purchasing",
+                    "position": "Einkauf",
+                    "office": "Niederlande",
+                    "name": "Christina Christ",
+                    "phone": "(+49)(06994) 333 3433-3",
+                    "email": "christ@workforce-machinery.com",
+                    "avatar": "https://i.ibb.co/LCxcJvG/christina.jpg"
+                },
+                {
+                    "id": 4,
+                    "department": "employees",
+                    "position": "Entwicklung",
+                    "office": "Deutschland",
+                    "name": "Mathias Weiss",
+                    "phone": "(+49)(06994) 333 3433-5",
+                    "email": "weiss@workforce-machinery.com",
+                    "avatar": "https://i.ibb.co/MnJzc5y/mathias.jpg"
+                }
+            ]
+        },
+
+        {
+            "name": "itmX GmbH",
+            "client_id": 1011011,
+            "address": {
+                "street": "Stuttgarter Straße 8",
+                "zip_code": 75179,
+                "city": "Pforzheim",
+                "country": "Deutschland"
+            },
+            "contacts": {
+                "mobile": "(+49)(06994) 333 3433-43",
+                "landline": "(+49)(06994) 333 3433-0",
+                "email": "info@workforce-machinery.com",
+                "website": "http://www.workforce-machinery.com"
+            },
+            "field": "Innovation",
+            "search_term": "Innovatives CRM System",
+            "language": "Deutsch (DE)",
+            "sales": 1000000,
+            "sales_yearly": [
+                { "year": 2017, "sales": 100000 },
+                { "year": 2018, "sales": 200000 },
+                { "year": 2019, "sales": 300000 },
+                { "year": 2020, "sales": 400000 }
+            ],
+            "responsibility": [
+                {
+                    "id": 1,
+                    "department": "management",
+                    "name": "Mark Aechter",
+                    "phone": "(+49)(06994) 333 3433-0",
+                    "email": "aechtler@workforce-machinery.com",
+                    "title": "zuständiger Mitarb."
+                },
+                {
+                    "id": 2,
+                    "department": "management",
+                    "name": "Udo Kurtz",
+                    "phone": "(+49)(06994) 333 3433-1",
+                    "email": "kurtz@workforce-machinery.com",
+                    "title": "Key Account Manager"
+                }
+            ],
+            "remark": {
+                "portfolio":[ 
+                    "Maschinen für die Pharmaindustrie",
+                    "Verpackungsmaschinen"
+                ],
+                "MA": 3500,
+                "turnover": 1.5
+            },
+            "scorecards": [
+                {
+                    "score": 6, 
+                    "text": "Ansprechpartner",
+                    "type": "contactPerson"
+                },
+                {
+                    "score": 100, 
+                    "text": "Aktivitäten",
+                    "type": "activities"
+                },
+                {
+                    "score": 20, 
+                    "text": "Opportunities",
+                    "type": "opportunities"
+                },
+                {
+                    "score": 0, 
+                    "text": "Angebote",
+                    "type": "offers"
+                },
+                {
+                    "score": 0, 
+                    "text": "Aufträge",
+                    "type": "contracts"
+                }
+            ],
+            "contact_person": [
+                {
+                    "id": 0,
+                    "department": "management",
+                    "position": "Geschäftsführung",
+                    "office": "Niederlande",
+                    "name": "Stefan Eller",
+                    "phone": "(+49)(06994) 333 3433-4",
+                    "email": "aechtler@workforce-machinery.com",
+                    "avatar": "https://i.ibb.co/mRdZFP1/stefan.jpg"
+                },
+                {
+                    "id": 1,
+                    "department": "management",
+                    "position": "Geschäftsführung",
+                    "office": "Niederlande",
+                    "name": "Mark Aechter",
+                    "phone": "(+49)(06994) 333 3433-0",
+                    "email": "aechtler@workforce-machinery.com",
+                    "avatar": "https://i.ibb.co/XbqpTDY/mark.jpg"
+                },
+                {
+                    "id": 2,
+                    "department": "management",
+                    "position": "Geschäftsführung",
+                    "office": "Niederlande",
+                    "name": "Udo Kurtz",
+                    "phone": "(+49)(06994) 333 3433-1",
+                    "email": "kurtz@workforce-machinery.com",
+                    "avatar": "https://i.ibb.co/0tr8HLS/udo.jpg"
+                },
+                {
+                    "id": 3,
+                    "department": "employees",
+                    "position": "Einkauf",
+                    "office": "Niederlande",
+                    "name": "Danny Schlachter",
+                    "phone": "(+49)(06994) 333 3433-2",
+                    "email": "schlachter@workforce-machinery.com",
+                    "avatar": "https://i.ibb.co/r3Wp5yL/danny.jpg"
+                },
+                {
+                    "id": 4,
+                    "department": "employees",
+                    "position": "Entwicklung",
+                    "office": "Deutschland",
+                    "name": "Alaeddine Achouri",
+                    "phone": "(+49)(06994) 333 3433-3",
+                    "email": "christ@workforce-machinery.com",
+                    "avatar": "https://i.ibb.co/LCxcJvG/christina.jpg"
+                },
+                {
+                    "id": 4,
+                    "department": "employees",
+                    "position": "Entwicklung",
+                    "office": "Deutschland",
+                    "name": "Mathias Weiss",
+                    "phone": "(+49)(06994) 333 3433-5",
+                    "email": "weiss@workforce-machinery.com",
+                    "avatar": "https://i.ibb.co/MnJzc5y/mathias.jpg"
+                }
+            ]
+        }
+    ]
+}
